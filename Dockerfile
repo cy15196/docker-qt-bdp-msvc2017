@@ -1,4 +1,4 @@
-FROM microsoft/windowsservercore:10.0.14393.1884
+﻿FROM microsoft/windowsservercore:10.0.14393.1884
 LABEL Description="Windows Server Core development environment for Qbs with Qt 5.12.8, Chocolatey and various dependencies for testing Qbs modules and functionality"
 
 # Disable crash dialog for release-mode runtimes
@@ -28,6 +28,8 @@ RUN choco install -y qbs --version 1.9.1 && qbs --version
 RUN choco install -y unzip --version 6.0 && unzip -v
 RUN choco install -y visualcpp-build-tools --version 15.9.11.0 && dir "%PROGRAMFILES(X86)%\Microsoft Visual C++ Build Tools"
 RUN choco install -y zip --version 3.0 && zip -v
+
+COPY OpenCppCoverage C:\\Qt\\OpenCppCoverage
 
 # for building the documentation
 RUN pip install beautifulsoup4 lxml
