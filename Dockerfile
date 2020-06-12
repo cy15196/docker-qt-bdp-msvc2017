@@ -26,7 +26,7 @@ RUN @powershell -NoProfile -ExecutionPolicy Bypass -Command \
 RUN choco install -y python2 --version 2.7.14 && refreshenv && python --version && pip --version
 RUN choco install -y qbs --version 1.9.1 && qbs --version
 RUN choco install -y unzip --version 6.0 && unzip -v
-RUN choco install -y visualcpp-build-tools --version 15.1.0.0 && dir "%PROGRAMFILES(X86)%\Microsoft Visual C++ Build Tools"
+RUN choco install -y visualcpp-build-tools --version 15.9.11.0 && dir "%PROGRAMFILES(X86)%\Microsoft Visual C++ Build Tools"
 RUN choco install -y zip --version 3.0 && zip -v
 
 # for building the documentation
