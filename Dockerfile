@@ -1,4 +1,4 @@
-﻿FROM microsoft/windowsservercore:10.0.14393.1884
+﻿FROM mcr.microsoft.com/windows/servercore
 LABEL Description="Windows Server Core development environment for Qbs with Qt 5.12.8, Chocolatey and various dependencies for testing Qbs modules and functionality"
 
 # Disable crash dialog for release-mode runtimes
